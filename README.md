@@ -36,3 +36,17 @@ Use the following credentials
 Create a simple REST-API that receives the generated JSON of the first task and puts the data into POJOs and prints them 
 well formatted to the console. 
 
+
+
+##Solution
+
+I created API for getting list of user. You can test via Postmanas well as.
+
+List of user endpoint is : localhost:8080/api/users
+As per task Basic Authentication required 
+Username: admin
+Password: admin
+
+Also you can check console log for output and check test caseas well as.
+
+
