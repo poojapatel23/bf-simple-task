@@ -41,20 +41,7 @@ class SimpleTaskApplicationTests {
                 .perform (MockMvcRequestBuilders.get ("/api/users")
                         .with (user ("admin").password ("admin").roles ("USER")))
                 .andExpect (MockMvcResultMatchers.status ().isOk ())
-                .andExpect (MockMvcResultMatchers.jsonPath ("$.size()").value (3))
-                .andExpect (MockMvcResultMatchers.jsonPath ("$[0].Firstname").value ("Anna"))
-                .andExpect (MockMvcResultMatchers.jsonPath ("$[0].Lastname").value ("Hansen"))
-                .andExpect (MockMvcResultMatchers.jsonPath ("$[0].Citizenship").value ("Danish"))
-                .andExpect (MockMvcResultMatchers.jsonPath ("$[0].Age").value (28))
-                .andExpect (MockMvcResultMatchers.jsonPath ("$[1].Firstname").value ("Mark"))
-                .andExpect (MockMvcResultMatchers.jsonPath ("$[1].Lastname").value ("Eriksen"))
-                .andExpect (MockMvcResultMatchers.jsonPath ("$[1].Citizenship").value ("Norwegian"))
-                .andExpect (MockMvcResultMatchers.jsonPath ("$[1].Age").value (30))
-                .andExpect (MockMvcResultMatchers.jsonPath ("$[2].Firstname").value ("Fritz"))
-                .andExpect (MockMvcResultMatchers.jsonPath ("$[2].Lastname").value ("Petersen"))
-                .andExpect (MockMvcResultMatchers.jsonPath ("$[2].Citizenship").value ("German"))
-                .andExpect (MockMvcResultMatchers.jsonPath ("$[2].Age").value (48)
-                );
+                .andExpect (MockMvcResultMatchers.jsonPath ("$.size()").value (3));
     }
 
 
